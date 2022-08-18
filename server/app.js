@@ -6,10 +6,12 @@ const cors = require('cors');
 
 // middleware
 app.use(cors());
+app.use(express.json()); // to convert data that pass through the body into json
 
 // routes
-app.get('/hello',(req,res)=>{
-    res.send('Hello World!');
+app.post('/api/register',(req,res)=>{
+    console.log(req.body);
+    res.json({status: 'ok'});
 });
 
 // listen port
