@@ -6,8 +6,12 @@ function App() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    async function registerUser() {
+    async function registerUser(event) {
+        // to stop the refreshing of the page
+        event.preventDefault();
+
         const response = await fetch('http://localhost:4000/api/register', {
+            method: 'POST',
             headers: {
                 'Content-Type': "application/json",
             },
