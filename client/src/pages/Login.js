@@ -1,7 +1,6 @@
-import '../App.css';
 import {useState} from "react";
 
-function App() {
+function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -52,4 +51,4 @@ function App() {
     );
 }
 
-export default App;
+export default Login;
